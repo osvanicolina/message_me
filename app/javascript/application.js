@@ -12,6 +12,10 @@ window.scroll_bottom = () => {
     console.log("scroll_bottom");
 }
 
+window.clear_input = () => {
+    $('#message_body').val("");
+}
+
 
 $(
     function() {     
