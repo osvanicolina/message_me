@@ -8,4 +8,4 @@ $(
     function() {     
         $('.ui.dropdown').dropdown();
     }
-); 
+); import "channels"
