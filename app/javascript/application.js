@@ -3,9 +3,24 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import * as jquery from "jquery"
 import "semantic-ui" 
+import "channels"
+
+window.scroll_bottom = () => {
+    if ($('#messages').length > 0) {
+        $('#messages').scrollTop($('#messages')[0].scrollHeight);
+    }
+    console.log("scroll_bottom");
+}
+
 
 $(
     function() {     
         $('.ui.dropdown').dropdown();
     }
-); import "channels"
+);
+
+// add auto scroll to bottom in messages
+$(document).on('turbo:load', function() {
+    scroll_bottom();
+});
+
